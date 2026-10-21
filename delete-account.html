@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eliminar cuenta — DEORURO Móvil</title>
+<meta name="description" content="Solicitar la eliminación de tu cuenta y datos en DEORURO Móvil (ENDE DEORURO S.A.)." />
+<style>
+  :root{
+    --ink:#1b1f27;
+    --ink-soft:#4a505c;
+    --line:#e2e5ea;
+    --bg:#ffffff;
+    --bg-alt:#f6f7f9;
+    --accent:#2457a8;
+    --accent-soft:#eaf1fb;
+    --danger:#b3261e;
+    --danger-soft:#fdecea;
+    --success:#1e7a46;
+    --success-soft:#e9f7ee;
+    --maxw:560px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg-alt);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px 60px;}
+  header.hero{background:var(--ink);color:#fff;padding:44px 20px 36px;}
+  header.hero .wrap{padding:0;}
+  header.hero h1{margin:0 0 6px;font-size:1.6rem;letter-spacing:-0.01em;}
+  header.hero p{margin:4px 0;color:#c7cbd4;font-size:0.95rem;}
+  main{padding-top:30px;}
+  .card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px;
+    margin-bottom:18px;
+  }
+  .notice{
+    background:var(--danger-soft);
+    border:1px solid #f3c9c5;
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:0.88rem;
+    color:#7a1d16;
+    margin-bottom:20px;
+  }
+  .notice strong{color:var(--danger);}
+  label{
+    display:block;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin:0 0 6px;
+  }
+  .field{margin-bottom:18px;}
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    width:100%;
+    font:inherit;
+    font-size:0.95rem;
+    padding:11px 13px;
+    border:1px solid var(--line);
+    border-radius:9px;
+    background:var(--bg-alt);
+    color:var(--ink);
+    outline:none;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus{
+    border-color:var(--accent);
+    background:#fff;
+  }
+  textarea{resize:vertical;min-height:90px;}
+  .hint{font-size:0.78rem;color:var(--ink-soft);margin-top:5px;}
+  .checkbox-row{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .checkbox-row input{margin-top:3px;}
+  button[type="submit"]{
+    width:100%;
+    background:var(--danger);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:13px 18px;
+    font-size:0.98rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:background .15s ease;
+  }
+  button[type="submit"]:hover{background:#962119;}
+  button[type="submit"]:disabled{background:#c9b4b2;cursor:not-allowed;}
+  .honey{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+  .steps{font-size:0.88rem;color:var(--ink-soft);}
+  .steps li{margin-bottom:6px;}
+  a{color:var(--accent);}
+  footer{text-align:center;color:var(--ink-soft);font-size:0.82rem;padding:20px 20px 0;}
+
+  #success-view{display:none;}
+  .success-icon{
+    width:56px;height:56px;border-radius:50%;
+    background:var(--success-soft);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;
+    font-size:1.6rem;
+  }
+  #success-view h2{text-align:center;margin:0 0 10px;font-size:1.2rem;}
+  #success-view p{text-align:center;color:var(--ink-soft);}
+
+  @media (max-width:480px){
+    header.hero{padding:34px 16px 28px;}
+    header.hero h1{font-size:1.35rem;}
+    .card{padding:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Eliminar cuenta</h1>
+    <p>DEORURO Móvil — ENDE DEORURO S.A.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div id="form-view">
+    <div class="notice">
+      <strong>Esta acción es permanente.</strong> Al confirmar tu solicitud,
+      eliminaremos tu cuenta y los datos personales asociados, según lo
+      descrito en nuestra
+      <a href="privacy-policy.html#retencion" target="_blank" rel="noopener">Política de Privacidad</a>.
+      Procesamos las solicitudes en un plazo razonable; te confirmaremos por
+      correo cuando se complete.
+    </div>
+
+    <div class="card">
+      <form
+        action="https://formsubmit.co/daniel.quisbert@endesyc.bo"
+        method="POST"
+        id="delete-form"
+      >
+        <input type="hidden" name="_subject" value="Solicitud de eliminación de cuenta — DEORURO Móvil" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="hidden" name="_next" value="https://ende-syc.github.io/privacy-policies-endesyc/delete-account.html?enviado=1" />
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="Nombre completo" required />
+        </div>
+
+        <div class="field">
+          <label for="correo">Correo electrónico de tu cuenta</label>
+          <input type="email" id="correo" name="Correo de la cuenta" required />
+          <div class="hint">El mismo correo con el que iniciás sesión en la app (o el asociado a tu cuenta de Google/Apple).</div>
+        </div>
+
+        <div class="field">
+          <label for="consumidor">Número de consumidor (opcional)</label>
+          <input type="text" id="consumidor" name="Número de consumidor" />
+          <div class="hint">Nos ayuda a ubicar tu cuenta más rápido, si lo conocés.</div>
+        </div>
+
+        <div class="field">
+          <label for="motivo">Motivo (opcional)</label>
+          <textarea id="motivo" name="Motivo" placeholder="Contanos brevemente por qué querés eliminar tu cuenta (opcional)"></textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" required />
+          <span>Entiendo que esta acción eliminará mi cuenta y mis datos personales de forma permanente.</span>
+        </label>
+
+        <button type="submit" id="submit-btn">Enviar solicitud de eliminación</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <p class="steps" style="margin:0 0 8px; font-weight:600; color:var(--ink);">¿Qué pasa después de enviar la solicitud?</p>
+      <ol class="steps">
+        <li>Recibimos tu solicitud en nuestro equipo de soporte.</li>
+        <li>Verificamos la cuenta asociada al correo que indicaste.</li>
+        <li>Eliminamos la cuenta y los datos personales asociados.</li>
+        <li>Te confirmamos por correo electrónico cuando el proceso termina.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="success-view">
+    <div class="card" style="text-align:center;">
+      <div class="success-icon">✅</div>
+      <h2>Solicitud enviada</h2>
+      <p>Recibimos tu pedido de eliminación de cuenta. Te vamos a confirmar
+      por correo electrónico cuando el proceso termine.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 ENDE DEORURO S.A. Ver también la
+  <a href="privacy-policy.html">Política de Privacidad</a> y
+  <a href="support.html">Soporte</a>.
+</footer>
+
+<script>
+  (function () {
+    if (new URLSearchParams(window.location.search).get('enviado') === '1') {
+      document.getElementById('form-view').style.display = 'none';
+      document.getElementById('success-view').style.display = 'block';
+    }
+    var form = document.getElementById('delete-form');
+    var btn = document.getElementById('submit-btn');
+    if (form && btn) {
+      form.addEventListener('submit', function () {
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
